@@ -28,6 +28,11 @@ export const navigation = [
         text: 'StatefulTabs',
         path: '/statefulTabs'
       }
+      ,
+      {
+        text: 'CrudGrid',
+        path: '/crudGrid'
+      }
     ]
   }
   ];

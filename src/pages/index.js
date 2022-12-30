@@ -4,3 +4,5 @@ export { default as TasksPage } from './tasks/tasks';
 export { default as DynamicPage } from './dynamic/dynamic';
 export { default as PersistPage } from './persist/persist';
 export { default as FxTabsPage } from './statefulTabs/fxTabs';
+export { default as CrudGridPage } from './grid/crudGrid';
+

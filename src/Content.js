@@ -21,10 +21,8 @@ export default function Content() {
         />
       </Routes>
       <Footer>
-        Copyright © 2011-{new Date().getFullYear()} {appInfo.title} Inc.
-        <br />
-        All trademarks or registered trademarks are property of their
-        respective owners.
+        Copyright © 2023-{new Date().getFullYear()} {appInfo.title} Inc.
+        FormationLabs R&D UI
       </Footer>
     </SideNavBarLayout>
   );

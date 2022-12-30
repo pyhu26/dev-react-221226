@@ -1,4 +1,4 @@
-import { HomePage, TasksPage, ProfilePage, DynamicPage, PersistPage, FxTabsPage } from './pages';
+import { HomePage, TasksPage, ProfilePage, DynamicPage, PersistPage, FxTabsPage, CrudGridPage } from './pages';
 import { withNavigationWatcher } from './contexts/navigation';
 
 const routes = [
@@ -27,6 +27,11 @@ const routes = [
     {
         path: '/statefulTabs',
         element: FxTabsPage
+    }
+    ,   
+    {
+        path: '/crudGrid',
+        element: CrudGridPage
     }
 ];
 
