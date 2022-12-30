@@ -1,4 +1,4 @@
-import { HomePage, TasksPage, ProfilePage, DynamicPage } from './pages';
+import { HomePage, TasksPage, ProfilePage, DynamicPage, PersistPage, FxTabsPage } from './pages';
 import { withNavigationWatcher } from './contexts/navigation';
 
 const routes = [
@@ -18,6 +18,15 @@ const routes = [
     {
         path: '/dynamic',
         element: DynamicPage
+    },
+    {
+        path: '/persist',
+        element: PersistPage
+    }
+    ,
+    {
+        path: '/statefulTabs',
+        element: FxTabsPage
     }
 ];
 

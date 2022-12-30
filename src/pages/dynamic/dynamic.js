@@ -105,7 +105,7 @@ export default function Dynamic() {
                 console.log(pageName);
             }}/>
 
-            {React.createElement(dynamicComponent) }
+            { React.createElement(dynamicComponent) }
         </>
 
 

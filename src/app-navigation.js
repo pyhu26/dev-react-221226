@@ -19,6 +19,14 @@ export const navigation = [
       {
         text: 'Dynamic',
         path: '/dynamic'
+      },
+      {
+        text: 'Persist',
+        path: '/persist'
+      },
+      {
+        text: 'StatefulTabs',
+        path: '/statefulTabs'
       }
     ]
   }
