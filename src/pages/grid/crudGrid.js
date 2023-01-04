@@ -21,6 +21,7 @@ import DataGrid, {
 
 
 export default function CrudGrid(){
+    const [isFilterShow , SetIsFilterShow] = React.useState(true); 
 
     const filterStyle = {
         background:"white",
@@ -44,7 +45,11 @@ export default function CrudGrid(){
     const gridHeight = 
         `calc(100vh - 157px)`
     
-    
+    const handleFilterShow = ()=> {
+        const value = !isFilterShow;
+        SetIsFilterShow(value);
+        console.log(value);
+    }
 
     return(
         <>
@@ -57,12 +62,20 @@ export default function CrudGrid(){
             crossAlign="stretch">
                 <Item
                     ratio={0}
-                    baseSize={300}
+                    baseSize={isFilterShow? 300 : 15}
                     height="100%"
                     >
-                    <div className="dx-fieldset" style={filterStyle}>
-                        <div style={{marginBottom:"20px"}}>Filter area</div>
 
+                    {isFilterShow ? 
+                    (
+                        <div className="dx-fieldset" style={filterStyle}>
+                       <div style={{display:"flex"}}>
+                            <div style={{flex:"none",  marginBottom:"20px"}}>Filter area</div>
+                            <div style={{marginLeft:"auto"}}>
+                                <Button icon={isFilterShow? "spinleft" : "spinright"} onClick={handleFilterShow}></Button>
+                            </div>  
+                       </div>
+                        
                         <div className="dx-field" >
                             <div className="dx-field-value">
                             </div>
@@ -123,6 +136,18 @@ export default function CrudGrid(){
                             </div>
                     </div>
                     </div>
+                    )
+                    :(
+                        <div className="dx-fieldset" style={{width:"10px", marginLeft:"7px", marginRight:"22px"}}>
+                            <div style={{display:"flex"}}>
+                                    <div style={{flex:"none",  marginBottom:"20px"}}></div>
+                                    <div style={{marginLeft:"auto"}}>
+                                        <Button icon={isFilterShow? "spinleft" : "spinright"} onClick={handleFilterShow}></Button>
+                                    </div>  
+                            </div>
+                       </div>
+                    )}
+                    
                 </Item>
                 <Item
                     ratio={1}>
